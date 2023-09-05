@@ -1,11 +1,11 @@
 import pyttsx3
-import PyPDF2
+import PyPDF3
 
-with open('/book.pdf', 'rb') as book:
+with open('TheBusinessofthe21stCenturyBook.pdf', 'rb') as book:
 
     full_text = ""
 
-    reader = PyPDF2.PdfFileReader(book)
+    reader = PyPDF3.PdfFileReader(book)
     
     audio_reader = pyttsx3.init()
     audio_reader.setProperty("rate", 100)
