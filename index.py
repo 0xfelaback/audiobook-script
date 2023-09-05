@@ -5,7 +5,7 @@ with open('/book.pdf', 'rb') as book:
 
     full_text = ""
 
-    reader = PyPDF3.PdfFileReader(book)
+    reader = PyPDF2.PdfFileReader(book)
     
     audio_reader = pyttsx3.init()
     audio_reader.setProperty("rate", 100)
