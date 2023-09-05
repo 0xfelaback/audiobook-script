@@ -1,16 +1,17 @@
 # PythonBookReader - An Audiobook Creator
 
-This repository contains the code for the Audiobook Creator, a Python script designed to convert text-based PDF books into audio versions.
+Welcome to my repository containing the code for the Audiobook Creator, a Python script designed to convert text-based PDF books into audio versions.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Customization](#customization)
 - [Contributions](#contributions)
 - [License](#license)
+- [Acknowledgments](#acknowledgements)
 
 ## Introduction
 
@@ -21,10 +22,10 @@ Utilizing the PyPDF3 library to extract text from a PDF file and the Python Text
 To use this script, you need the following:
 
 - Python 3.x
-- The `PyPDF2` library, which can be installed using pip:
+- The `PyPDF3` library, which can be installed using pip:
   
   ```bash
-   pip install pypdf2
+   pip install pypdf3
    ```
   
 - The `pyttsx3` module, which can be installed using pip:
@@ -32,55 +33,45 @@ To use this script, you need the following:
   ```bash
    pip install pyttsx3
    ```
-  
-- The `threading` module (usually included in Python standard library)
 
 ## Installation
 
 1. Clone this repository to to both the camera and remote devices or download it as a ZIP file:
 
    ```bash
-   git clone https://github.com/elcruzo/camera-chat.git
+   git clone https://github.com/elcruzo/audiobook-script.git
    ```
+   
 2. Navigate to the project directory:
 
    ```bash
-   cd camera-chat
+   cd audiobook-script
    ```
+   
 3. Ensure you have Python 3.x installed. You can check by running:
 
    ```bash
    python3 --version
    ```
    If Python is not installed, you can download it from the official [Python website](https://www.python.org/downloads/).
-4. Install the Vidstream Library using pip:
-
-   ```bash
-   pip install vidstream
-   ```
-
-5. Update the IP addresses and port numbers in the `index.py` file to match your network setup. Modify the following lines to match your network setup:
-
-   ```bash
-    receiving = StreamingServer('192.168.0.68', 9999)
-    sending = CameraClient('192.168.0.172', 9999)
-   ```
-6. Replace the IP addresses and port numbers with the appropriate values for your devices.
-
 
 ## Usage
+   
+1. Place Your PDF File in the project directory. Make sure to rename the PDF file to `book.pdf` or modify the script to specify the correct file path.
 
-1. Start the server on the receiving device by running the following command:
+2. Run the Script:
+
    ```bash
    python index.py
    ```
-2. Wait for a moment to allow the server to initialize.
-3. Start the client on the sending device by running the following command:
-   ```bash
-   python index.py
-   ```
-4. The video stream should now start, and you can see live video from the sending device on the receiving device.
-5. To end the chat, simply press Enter (or any key) in the terminal where the server is running. This will stop the video stream on both devices.
+   
+3. The script will process the PDF file and create an audiobook in MP3 format named `myaudiobook.mp3` in the same directory.
+
+## Customization
+
+You can customize the script by adjusting the following parameters:
+
+- `rate` : You can change the reading speed by modifying the rate property. The current rate is set to 100, but you can increase or decrease it as needed for a comfortable listening experience.
 
 ## Contributions
 
@@ -90,8 +81,12 @@ Contributions to this repository are welcome! If you have any improvements or fe
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
+## Acknowledgements
+
+This project is based on the PyPDF3 and pyttsx3 libraries. Special thanks to the developers of these libraries for their contributions.
+
 ---
 
-Have fun exploring my Camera Chat Application! If you have any questions or run into issues, don't hesitate to ask for help.
+Enjoy your newly created audiobook with PythonBookReader! If you have any questions or encounter any issues, please feel free to open an issue in the project's GitHub repository.
 
    
