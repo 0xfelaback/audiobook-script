@@ -1,7 +1,7 @@
 import pyttsx3
 import PyPDF3
 
-with open('TheBusinessofthe21stCenturyBook.pdf', 'rb') as book:
+with open('book.pdf', 'rb') as book:
 
     full_text = ""
 
