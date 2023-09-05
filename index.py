@@ -1,5 +1,5 @@
 import pyttsx3
-import PyPDF3
+import PyPDF2
 
 with open('/book.pdf', 'rb') as book:
 
